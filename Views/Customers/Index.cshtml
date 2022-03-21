@@ -1,0 +1,8 @@
+﻿ @model IEnumerable<TrainingInChetu.Models.Location>
+     <h4>Location Details of Customers</h4>
+     <ol>
+         @foreach(var loc in Model)
+            {
+                <li class="nav-link"><a asp-action="CustomersList" asp-controller="Customers" asp-route-id="@loc.Id">@loc.City</a></li>
+            }
+     </ol>
